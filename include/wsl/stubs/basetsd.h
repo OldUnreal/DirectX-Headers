@@ -52,7 +52,9 @@ typedef int64_t INT_PTR, *PINT_PTR;
 // string manipulation APIs to work with resulting strings.
 // APIs to D3D/DXCore will work on Linux wchars, but beware with
 // interactions directly with the Windows kernel.
-typedef char CHAR, *PSTR, *LPSTR, TCHAR, *PTSTR;
+// Metallicafan212:	These conflict with unreal engine defines, we don't need TCHAR on this list
+//typedef char CHAR, *PSTR, *LPSTR, TCHAR, *PTSTR;
+typedef char CHAR, *PSTR, *LPSTR, *PTSTR;
 typedef const char *LPCSTR, *PCSTR, *LPCTSTR, *PCTSTR;
 typedef wchar_t WCHAR, *PWSTR, *LPWSTR, *PWCHAR;
 typedef const wchar_t *LPCWSTR, *PCWSTR;
